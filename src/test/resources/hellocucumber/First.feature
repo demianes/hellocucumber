@@ -1,4 +1,4 @@
-Feature: Is it Friday yet?
+Feature: What the?
   Everybody wants to know when it's Friday
 
   @First
@@ -6,6 +6,7 @@ Feature: Is it Friday yet?
     Given today is Sunday
     When I ask whether it's Friday yet
     Then I should be told "Nope"
+
   @Second
   Scenario: Monday is Monday
     Given today is Monday
