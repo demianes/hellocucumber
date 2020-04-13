@@ -5,10 +5,19 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import static org.junit.Assert.*;
-class IsItFriday {
+class IsItDay {
     static String isItFriday(String today) {
-        if (today.equals("Sunday")){
+        if (today.equals("Friday")){
+            return "Yes";
+        }
+        else {
             return "Nope";
+        }
+    }
+
+    static String isItMonday(String today){
+        if (today.equals("Monday")){
+            return "Yes";
         }
         else {
             return "Nope";
@@ -33,13 +42,13 @@ public class StepDefinitions {
 
     @When("I ask whether it's Friday yet")
     public void iAskWhetherItIsFridayYet() {
-        actualAnswer = IsItFriday.isItFriday(today);
+        actualAnswer = IsItDay.isItFriday(today);
     }
 
 
     @When("I ask whether it's Monday yet")
     public void iAskWhetherItSMondayYet() {
-        actualAnswer = IsItFriday.isItFriday(today);
+        actualAnswer = IsItDay.isItMonday(today);
     }
 
     @Then("I should be told {string}")
