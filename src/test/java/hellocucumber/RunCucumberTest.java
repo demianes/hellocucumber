@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         "json:target/json",
         "pretty:target/pretty",
         "de.monochromata.cucumber.report.PrettyReports:target/cucumber"},
-        tags = {"@Second"})
+        tags = {"@Second,@First"})
 public class RunCucumberTest {
 
 }
